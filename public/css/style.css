@@ -64,6 +64,11 @@ ul {
     font-weight: bold;
 }
 
+.font-maitree {
+    font-family: 'Maitree';
+    font-style: normal;
+}
+
 .flex {
     display: flex;
 }
@@ -168,27 +173,19 @@ ul {
         max-width: 768px;
     }
 
-    /* .md-text-left {
-        text-align: left;
-    } */
-}
-
-/* for large screen lg (1024px) */
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-
-    /* #nav .toggle-btn>button {
+    #nav .toggle-btn>button {
         display: none;
     }
 
     #nav {
         flex-direction: row !important;
+        justify-content: space-between !important;
     }
 
     .collapse {
         max-height: initial !important;
+        align-items: center;
+
     }
 
     .collapse ul {
@@ -205,7 +202,46 @@ ul {
 
     .lg-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .nav-item:hover {
+        color: var(--text-blue);
+    }
+
+    .nav-item a::after {
+        content: "";
+        position: relative;
+        display: block;
+        height: 5px;
+        width: 2ch;
+        background: var(--text-grey);
+        border-radius: 16px;
+        bottom: 1px;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s ease-out 0s;
+    }
+
+    .nav-item:hover a::after {
+        background: var(--text-blue);
+        width: 100%;
+    }
+
+    /* .md-text-left {
+        text-align: left;
     } */
+}
+
+/* for large screen lg (1024px) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    /* #nav .toggle-btn>button {
+        display: none;
+    } */
+
 
 }
 
@@ -228,26 +264,36 @@ ul {
 /* ------------------- /Media Query ------------------------ */
 
 /* ------------------- Navigation Style ------------------------ */
-#nav {
-    position: absolute;
+header {
+    position: relative;
     top: 0;
     left: 0;
+    background-color: var(--bg-blue);
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+}
+
+#nav {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
     width: 100%;
     padding: 1rem 1.5rem;
-    background: var(--text-light);
+    /* background: var(--text-light); */
     flex-direction: column;
 }
 
 #nav .collapse {
     max-height: 0px;
     overflow-y: hidden;
-    transition: all 0.9s ease;
+    justify-content: center;
+    transition: all 0.5s ease;
 }
 
 #nav .collapse ul {
     flex-direction: column;
     text-align: center;
-    padding: 0 3rem;
+    /* padding: 0 3rem; */
 }
 
 #nav .collapse ul>li {
@@ -257,12 +303,12 @@ ul {
 }
 
 #nav .toggle-btn>button {
-    font-size: 2em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1rem;
-    color: var(--text-dark2);
+    color: var(--text-grey);
+}
+
+#nav-head {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .active {
@@ -272,82 +318,6 @@ ul {
 
 /* ------------------- /Navigation Style ------------------------ */
 
-.navbar {
-    height: 110px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 4px 20px rgba(94, 94, 94, 0.25);
-    background-color: var(--bg-color-dark);
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
-nav ul {
-    list-style: none;
-    flex-wrap: wrap;
-    margin-block: 0;
-    margin-inline: 0;
-    padding-inline: 0;
-}
-
-nav div {
-    height: 100%;
-}
-
-.navbar-nav {
-    display: flex;
-    height: inherit;
-    align-items: center;
-}
-
-
-.navbar-brand h1 {
-    display: contents;
-    font-family: 'Maitree';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3em;
-
-    color: var(--bg-blue);
-}
-
-.nav-item {
-    font-style: normal;
-    font-size: 1.25em;
-    line-height: 27px;
-    margin-left: 50px;
-}
-
-.nav-item a:hover {
-    color: var(--bg-blue);
-}
-
-.nav-item a::after {
-    content: "";
-    position: relative;
-    display: block;
-    height: 5px;
-    width: 20px;
-    background: #414141;
-    border-radius: 16px;
-    bottom: 1px;
-    left: 0;
-    z-index: -1;
-    transition: all 0.3s ease-out 0s;
-}
-
-.nav-item a:hover::after {
-    background: var(--bg-blue);
-    width: 100%;
-}
 
 .content {
     display: flex;
