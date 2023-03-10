@@ -227,6 +227,19 @@ ul {
         width: 100%;
     }
 
+    .lg-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pf-img {
+        max-height: 640px;
+        max-width: 546px;
+        width: 100%;
+        aspect-ratio: 546 / 640;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
     /* .md-text-left {
         text-align: left;
     } */
@@ -318,79 +331,55 @@ header {
 
 /* ------------------- /Navigation Style ------------------------ */
 
-
-.content {
-    display: flex;
-    margin-top: 20px;
+section {
+    width: 100%;
+    padding: 1rem 1.5rem;
 }
 
-
-.col2 {
-    width: 50%;
-}
-
-.intro-img {
-    margin-right: 25px;
-    display: flex;
-    justify-content: center;
+.pf-img {
     position: relative;
-    height: 640px;
 }
 
-.intro-inner {
+.pf-info {
+    position: relative;
+}
+
+.hero {
     position: absolute;
     bottom: 0;
-}
-
-.intro-img>img {
-    /* float: right; */
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100%;
-}
-
-
-.intro-img>.ellipse {
-
-    width: 504px;
-    height: 504px;
+    width: 100%;
     border-radius: 50%;
-    background: var(--bg-color-dark);
 }
 
-.intro-info {
-    margin-left: 25px;
-    height: 640px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.intro-info h1 {
-    display: contents;
-    font-family: 'Maitree';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3em;
-    display: flex;
-}
-
-h1>span {
-    margin-left: 12px;
-    color: var(--bg-blue);
+.ellipse {
+    position: absolute;
+    bottom: 0;
+    top: 21.25%;
+    right: 3.85%;
+    left: 3.85%;
+    border-radius: 50%;
+    background: var(--bg-blue);
 }
 
 .mail-box {
-    width: 283px;
-    height: 54px;
-    padding-inline: 12px;
+    max-width: 50%;
+    padding-inline: 1rem;
     background: #FFFFFF;
-    box-shadow: -1px 4px 20px rgba(110, 108, 108, 0.2);
+    box-shadow: var(--box-shadow);
     border-radius: 20px;
-    position: relative;
-    display: flex;
     justify-content: space-between;
 }
+
+/* .mail-button {
+    width: 47px;
+    height: 44px;
+    background: var(--bg-blue);
+    border-radius: 17px;
+} */
 
 .social-media {
     margin-block: 1em;
@@ -402,7 +391,6 @@ h1>span {
 
 .footer {
     bottom: 0;
-    text-align: center;
     margin-top: 2rem;
 }
 
