@@ -365,21 +365,40 @@ section {
     background: var(--bg-blue);
 }
 
+.pf-info {
+    margin-left: 1rem;
+    justify-content: end;
+}
+
+.pf-info p {
+    margin-top: 1.5rem;
+}
+
 .mail-box {
-    max-width: 50%;
-    padding-inline: 1rem;
+    margin-top: 10%;
+    max-width: fit-content;
+    padding: 0.5rem 1rem;
     background: #FFFFFF;
     box-shadow: var(--box-shadow);
     border-radius: 20px;
     justify-content: space-between;
 }
 
-/* .mail-button {
-    width: 47px;
-    height: 44px;
+.mail-button {
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2rem;
     background: var(--bg-blue);
-    border-radius: 17px;
-} */
+    border-radius: 10px;
+}
+
+.mail-box p {
+    margin-block: auto;
+}
+
+.mail-button img {
+    margin: auto;
+}
 
 .social-media {
     margin-block: 1em;
