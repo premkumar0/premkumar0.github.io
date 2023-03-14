@@ -22,7 +22,7 @@
         <nav class="container mx-auto flex" id="nav">
             <div class="flex" id="nav-head">
                 <div class="nav-brand font-maitree">
-                    <a class="text-xl text-dark" href="#">
+                    <a class="text-md md-text-lg lg-text-xl text-dark" href="#">
                         Prem.
                     </a>
                 </div>
@@ -33,15 +33,15 @@
                 </div>
             </div>
             <div class="collapse flex" id="navbarSupportedContent">
-                <ul class="flex">
+                <ul class="flex md-text-md lg-text-md">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#nav">About</a>
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nav">Work</a>
+                        <a class="nav-link" href="#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nav">Contact Me</a>
+                        <a class="nav-link" href="#work">Work</a>
                     </li>
                 </ul>
             </div>
@@ -50,15 +50,15 @@
 
 
     <main>
-        <section class="container mx-auto">
+        <section class="container mx-auto" id="about">
             <div class="grid cols-1 lg-cols-2">
                 <div class="pf-img">
                     <div class="ellipse mx-auto"></div>
                     <img class="hero" src="./public/img/prof-image.png" alt="Hero" srcset="">
                 </div>
-                <div class="pf-info flex flex-column md-text-center">
-                    <div class="text-lg font-maitree">
-                        Hi, I’m <span class="text-dark mx-auto">Prem Kumar !</span>
+                <div class="pf-info flex flex-column sm-text-center md-ms-1 sm-flex-center">
+                    <div class="text-md md-text-lg font-maitree">
+                        Hi, I’m <span class="text-dark mx-auto d-block lg-d-inline">Prem Kumar !</span>
                     </div>
                     <p>
                         An experienced Full Stack Developer with a focus on building scalable web applications using
@@ -96,7 +96,15 @@
             </div>
         </section>
     </main>
-    <div class="footer text-center">Copyrights &COPY; <a class="link" href="/">Premkumar</a></div>
+    <footer class="container mx-auto">
+        <div class="footer text-center">Developed by <a class="link" href="/">@Premkumar</a></div>
+        <div class="contact-me flex justify-center align-center">
+            <a href="https://api.whatsapp.com/send?phone=919553261501&text=I've%20seen%20your%20profile%20at%20premkumar0.github.io%0A"
+                target="_blank">
+                <img src="./public/img/whatsapp.svg" alt="contact">
+            </a>
+        </div>
+    </footer>
     <script src="./public/js/index.js"></script>
 </body>
 
